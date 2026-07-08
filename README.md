@@ -41,7 +41,7 @@ sudo apt install python3-tk
 
 ## Download a VOSK model
 
-For the best local speech recognition experience, use VOSK.
+use vosk:
 
 1. Download a small English model, for example:
 
@@ -58,7 +58,7 @@ unzip vosk-model-small-en-us-0.15.zip
 python3 main.py --model models/vosk-model-small-en-us-0.15
 ```
 
-If you do not have a VOSK model installed, the project can fall back to PocketSphinx if `speech_recognition` and `pocketsphinx` are available.
+If you do not have a VOSK model installed, the project can fall back to PocketSphinx if `speech_recognition` and `pocketsphinx` are available so try to use vosk for better experience.
 
 ## Run the assistant
 
@@ -89,10 +89,9 @@ python3 main.py --list --model models/vosk-model-small-en-us-0.15
 
 ## Extending commands
 
-Add a new function to `assistant/commands.py`, then add an entry to `COMMANDS` with keywords and a description.
+Add a new function to `assistant/commands.py`, then add an entry to `COMMANDS` with keywords and a description, making it easier to use and customise for your comfort.
 
 ## Notes
 
-- The assistant runs locally and does not require paid services.
-- It asks for confirmation only for actions marked unsafe.
+- The assistant runs locally and does not require any like any paid services.
 - The GUI is intentionally small and focused on voice command launching.
